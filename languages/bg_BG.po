@@ -1,0 +1,335 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Ecosociety\n"
+"POT-Creation-Date: 2016-09-10 13:43+0300\n"
+"PO-Revision-Date: 2016-09-10 13:44+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: bg_BG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:13
+msgid "Epic 404 - Article Not Found"
+msgstr "Грешка 404: съдържанието не е намерено"
+
+#: 404.php:14
+msgid "This is embarassing. We can't find what you were looking for."
+msgstr "Не откриваме това, което търсите."
+
+#: 404.php:22
+msgid ""
+"Whatever you were looking for was not found, but maybe try looking again or "
+"search using the form below."
+msgstr "Моля, опитайте отново използвайки формата."
+
+#: VOTING VISIBLE!/page-tree-c.php:30 VISIBLE!/page-tree-listing-c.php:62
+#: VISIBLE!/page-tree-listing-results.php:62
+#: VISIBLE!/page-tree-listing-results.php:128 VISIBLE!/page-tree-listing.php:62
+#: VISIBLE!/page-tree-listing.php:128 VISIBLE!/page-tree.php:30
+#: page-tree-c.php:28 page-tree-listing-c.php:62
+#: page-tree-listing-results.php:62 page-tree-listing-results.php:125
+#: page-tree-listing.php:62 page-tree-listing.php:125 page-tree.php:28
+msgid "Tree type:"
+msgstr "Вид:"
+
+#: VOTING VISIBLE!/page-tree-c.php:33 VISIBLE!/page-tree-listing-c.php:65
+#: VISIBLE!/page-tree-listing-results.php:65
+#: VISIBLE!/page-tree-listing-results.php:131 VISIBLE!/page-tree-listing.php:65
+#: VISIBLE!/page-tree-listing.php:131 VISIBLE!/page-tree.php:33
+#: page-tree-c.php:31 page-tree-listing-c.php:65
+#: page-tree-listing-results.php:65 page-tree-listing-results.php:128
+#: page-tree-listing.php:65 page-tree-listing.php:128 page-tree.php:31
+msgid "Age:"
+msgstr "Възраст:"
+
+#: VOTING VISIBLE!/page-tree-c.php:36 VISIBLE!/page-tree-listing-c.php:68
+#: VISIBLE!/page-tree-listing-results.php:68
+#: VISIBLE!/page-tree-listing-results.php:134 VISIBLE!/page-tree-listing.php:68
+#: VISIBLE!/page-tree-listing.php:134 VISIBLE!/page-tree.php:36
+#: page-tree-c.php:34 page-tree-listing-c.php:68
+#: page-tree-listing-results.php:68 page-tree-listing-results.php:131
+#: page-tree-listing.php:68 page-tree-listing.php:131 page-tree.php:34
+msgid "Location:"
+msgstr "Местоположение:"
+
+#: VOTING VISIBLE!/page-tree-c.php:39 VISIBLE!/page-tree-listing-c.php:71
+#: VISIBLE!/page-tree-listing-results.php:71
+#: VISIBLE!/page-tree-listing-results.php:137 VISIBLE!/page-tree-listing.php:71
+#: VISIBLE!/page-tree-listing.php:137 VISIBLE!/page-tree.php:39
+#: page-tree-c.php:37 page-tree-listing-c.php:71
+#: page-tree-listing-results.php:71 page-tree-listing-results.php:134
+#: page-tree-listing.php:71 page-tree-listing.php:134 page-tree.php:37
+msgid "Nominator:"
+msgstr "Номиниращ:"
+
+#: VOTING VISIBLE!/page-tree-c.php:41 VISIBLE!/page-tree-listing-c.php:74
+#: VISIBLE!/page-tree-listing-results.php:74
+#: VISIBLE!/page-tree-listing-results.php:140 VISIBLE!/page-tree-listing.php:74
+#: VISIBLE!/page-tree-listing.php:140 VISIBLE!/page-tree.php:41
+msgid "No of votes:"
+msgstr "Брой гласове:"
+
+#: VOTING VISIBLE!/page-tree-c.php:65 VISIBLE!/page-tree-listing-c.php:116
+#: VISIBLE!/page-tree-listing-results.php:173
+#: VISIBLE!/page-tree-listing.php:173 VISIBLE!/page-tree.php:65
+#: attachment.php:27 image.php:51 index.php:27 page-full-width.php:30
+#: page-right-sidebar.php:26 page-tree-c.php:63 page-tree-listing-2016.php:198
+#: page-tree-listing-c.php:113 page-tree-listing-results.php:168
+#: page-tree-listing.php:168 page-tree-voting-c.php:33 page-tree-voting.php:33
+#: page-tree.php:62 page-twr.php:33 page.php:33 single-twr-news.php:46
+#: single.php:44
+msgid "Tags"
+msgstr "Етикети"
+
+#: VOTING VISIBLE!/page-tree-c.php:77 VISIBLE!/page-tree-listing-c.php:128
+#: VISIBLE!/page-tree-listing-results.php:185
+#: VISIBLE!/page-tree-listing.php:185 VISIBLE!/page-tree.php:77
+#: attachment.php:41 image.php:63 index.php:52 page-full-width.php:42
+#: page-homepage.php:114 page-right-sidebar.php:40 page-tree-c.php:75
+#: page-tree-listing-2016.php:210 page-tree-listing-c.php:125
+#: page-tree-listing-results.php:180 page-tree-listing.php:180
+#: page-tree-voting-c.php:45 page-tree-voting.php:45 page-tree.php:74
+#: page-twr-home.php:189 page-twr.php:45 page.php:45 search.php:58
+#: single-twr-news.php:65 single.php:63
+msgid "Not Found"
+msgstr "Не е намерено"
+
+#: VOTING VISIBLE!/page-tree-c.php:80 VISIBLE!/page-tree-listing-c.php:131
+#: VISIBLE!/page-tree-listing-results.php:188
+#: VISIBLE!/page-tree-listing.php:188 VISIBLE!/page-tree.php:80
+#: attachment.php:44 image.php:66 index.php:55 page-full-width.php:45
+#: page-homepage.php:117 page-right-sidebar.php:43 page-tree-c.php:78
+#: page-tree-listing-2016.php:213 page-tree-listing-c.php:128
+#: page-tree-listing-results.php:183 page-tree-listing.php:183
+#: page-tree-voting-c.php:48 page-tree-voting.php:48 page-tree.php:77
+#: page-twr-home.php:192 page-twr.php:48 page.php:48 search.php:61
+#: single-twr-news.php:68 single.php:66
+msgid "Sorry, but the requested resource was not found on this site."
+msgstr "Търсеното съдържание не е намерено."
+
+#: VOTING VISIBLE!/page-tree-listing-c.php:84
+#: VISIBLE!/page-tree-listing-results.php:84
+#: VISIBLE!/page-tree-listing-results.php:149 VISIBLE!/page-tree-listing.php:84
+#: VISIBLE!/page-tree-listing.php:149 index.php:22 lib/bones.php:48
+#: page-tree-listing-2016.php:83 page-tree-listing-2016.php:163
+#: page-tree-listing-c.php:81 page-tree-listing-results.php:81
+#: page-tree-listing-results.php:144 page-tree-listing.php:81
+#: page-tree-listing.php:144
+msgid "Read more &raquo;"
+msgstr "Още &raquo;"
+
+#: archive.php:10
+msgid "Now reading:"
+msgstr "Разглеждате:"
+
+#: archive.php:14
+msgid "Posts Tagged:"
+msgstr "С етикет:"
+
+#: archive.php:18 author.php:8
+msgid "Posts By:"
+msgstr "От:"
+
+#: archive.php:22
+msgid "Daily Archives:"
+msgstr "Архиви по ден:"
+
+#: archive.php:26
+msgid "Monthly Archives:"
+msgstr "Архиви по месец:"
+
+#: archive.php:30
+msgid "Yearly Archives:"
+msgstr "Архиви по година:"
+
+#: archive.php:92 author.php:58 index.php:42 search.php:46
+msgid "&laquo; Older Entries"
+msgstr "&laquo; По-стари"
+
+#: archive.php:93 author.php:59 index.php:43 search.php:47
+msgid "Newer Entries &raquo;"
+msgstr "По-нови &raquo;"
+
+#: archive.php:103 author.php:69
+msgid "No Posts Yet"
+msgstr "Все още няма публикации"
+
+#: archive.php:106 author.php:72
+msgid "Sorry, What you were looking for is not here."
+msgstr "Съжалавяме, това което търсите не е открито."
+
+#: attachment.php:15 author.php:31 search.php:19
+msgid "Posted"
+msgstr "Публикувано"
+
+#: attachment.php:15 author.php:31
+msgid "by"
+msgstr "от"
+
+#: attachment.php:15 author.php:31
+msgid "filed under"
+msgstr "в секция"
+
+#: comments.php:11
+msgid "This post is password protected. Enter the password to view comments."
+msgstr "­"
+
+#: comments.php:21
+msgid "No"
+msgstr "Не"
+
+#: comments.php:21
+msgid "Responses"
+msgstr "Отговори"
+
+#: comments.php:21
+msgid "One"
+msgstr "Един"
+
+#: comments.php:21
+msgid "Response"
+msgstr "отговор"
+
+#: comments.php:21
+msgid "to"
+msgstr "към"
+
+#: comments.php:25 comments.php:46
+msgid "Older comments"
+msgstr "По-стари коментари"
+
+#: comments.php:26 comments.php:47
+msgid "Newer comments"
+msgstr "По-нови коментари"
+
+#: comments.php:60
+msgid "Comments are closed"
+msgstr "Коментарите са заключени"
+
+#: functions.php:175
+msgid "Edit"
+msgstr "Редакция"
+
+#: functions.php:179
+msgid "Your comment is awaiting moderation."
+msgstr "Коментарът ви очаква одобрение."
+
+#: functions.php:214
+msgid ""
+"This post is password protected. To view it please enter your password below:"
+msgstr ""
+
+#: functions.php:215
+msgid "Password:"
+msgstr ""
+
+#: header-fat.php:98 header-twr.php:93 header.php:88 searchform.php:4
+msgid "Search"
+msgstr "Търсене"
+
+#: image.php:85
+msgid "Image metadata"
+msgstr ""
+
+#: image.php:109
+msgid "Date Taken"
+msgstr ""
+
+#: image.php:111
+msgid "Copyright"
+msgstr ""
+
+#: image.php:113
+msgid "Credit"
+msgstr ""
+
+#: image.php:115
+msgid "Title"
+msgstr "Заглавие"
+
+#: image.php:117
+msgid "Caption"
+msgstr ""
+
+#: image.php:119
+msgid "Camera"
+msgstr ""
+
+#: image.php:121
+msgid "Focal Length"
+msgstr ""
+
+#: image.php:123
+msgid "Aperture"
+msgstr ""
+
+#: image.php:125
+msgid "ISO"
+msgstr ""
+
+#: image.php:127
+msgid "Shutter Speed"
+msgstr ""
+
+#: lib/admin.php:73
+msgid "j F Y @ g:i a"
+msgstr ""
+
+#: lib/admin.php:85
+msgid "Recently on Themble (Customize on admin.php)"
+msgstr ""
+
+#: lib/admin.php:132
+msgid ""
+"<span id=\"footer-thankyou\">Developed by <a href=\"http://aslavinsky.com\" "
+"target=\"_blank\">Innerspace</a></span>. Built using <a href=\"http://"
+"themble.com/bones\" target=\"_blank\">Bones &amp; Bootstrap 3</a>."
+msgstr ""
+
+#: lib/bones.php:208
+msgid "First"
+msgstr "Първи"
+
+#: lib/bones.php:211 lib/bones.php:213
+msgid "&larr; Previous"
+msgstr "&larr; Предишни"
+
+#: lib/bones.php:223
+msgid "Next &rarr;"
+msgstr "Следващи &rarr;"
+
+#: lib/bones.php:227
+msgid "Last"
+msgstr "Последни"
+
+#: page-tree-listing-2016.php:107 page-tree-listing-2016.php:186
+msgid "Back to Finalists"
+msgstr "Обратно към всички финалисти"
+
+#: search.php:7
+msgid "Search Results for"
+msgstr "Резултати от търсене на"
+
+#: search.php:24
+msgid "Read more on"
+msgstr "Прочети повече за"
+
+#: sidebar-sidebar-left.php:17 sidebar-sidebar-right.php:17
+#: sidebar-sidebar-twr-right.php:17
+msgid "Please activate some Widgets"
+msgstr "Моля, активирайте поне една джаджа."
+
+#: single-twr-news.php:52 single.php:50
+msgid "Edit post"
+msgstr "Редакция на поста"
+
+#~ msgid "Posts Categorized:"
+#~ msgstr "В катргория:"
