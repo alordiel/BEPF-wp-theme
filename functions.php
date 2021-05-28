@@ -1,4 +1,7 @@
 <?php
+
+const BEPF_ABS_PATH = __DIR__;
+define("BEPF_REL_PATH", get_template_directory_uri());
 // Get Bones Core Up & Running!
 require_once('lib/bones.php');
 
