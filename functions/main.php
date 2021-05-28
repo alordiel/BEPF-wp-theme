@@ -227,5 +227,5 @@ function dbga($something)
 
 function is_resources_page($page_template): bool
 {
-	return (is_singular('resource') || in_array($page_template, ['page-resource-landing.php', 'page-resources-filters.php']));
+	return (is_singular('resource') || is_post_type_archive('resources') || is_post_type_archive('expert')  || in_array($page_template, ['page-resource-landing.php', 'page-resources-filters.php']));
 }

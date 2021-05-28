@@ -16,7 +16,9 @@ h1, h2, h3, h4, h5, h6 {
 div, p, ul, li, a, span {
   font-family: 'Roboto Slab', sans-serif;
 }
-
+img {
+  max-width: 100%;
+}
 /* HEADER SECTION */
 .navigation {
   border-bottom: 1px solid #ccc;
@@ -250,10 +252,49 @@ div, p, ul, li, a, span {
   padding: 25px 0;
 }
 
+/* ARCHIVE - Resources*/
+.container-news-excerpts {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+.label-date {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+  background-color: #f47822;
+}
+
+.label-taxonomy {
+  display: block;
+  padding: .2em .6em .3rem 0;
+  white-space: nowrap;
+  color: #404040;
+}
+.pagination {
+  justify-content: center;
+}
+.pagination li {
+  border: 1px solid #f47822;
+  padding: 5px 8px;
+}
+.pagination li.active {
+  border: 1px solid #6f6f6f;
+  padding: 5px 8px;
+}
 @media (max-width: 768px) {
-  .donors-logos{
+  .donors-logos {
     padding: 0 15px;
   }
+
   .the-experts,
   .resources-list {
     flex-wrap: wrap;
@@ -293,7 +334,3 @@ div, p, ul, li, a, span {
   }
 }
 
-
-@media (max-width: 580px) {
-
-}
