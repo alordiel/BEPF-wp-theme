@@ -91,12 +91,68 @@ div, p, ul, li, a, span {
 
 /* RESOURCE LANDING PAGE */
 /* - VISION TEXT */
+.our-vision {
+  background-color: #f27400;
+  padding: 20px 0;
+  margin-bottom: 50px;
+}
+.our-vision  .container {
+  padding: 50px 10px;
+  background-image: url('/wp-content/themes/ecosociety/assets/images/Rocs_Flags-03.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.our-vision h2 {
+  color: #fff;
+}
+
 /* - LATEST RESOURCES */
 /* - CONSULTATION */
+.the-experts {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.single-expert-card {
+  width: calc(25% - 20px);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.single-expert-card:hover {
+  transform: scale(1.05);
+}
+
+.single-expert-card a {
+  text-decoration: none;
+}
+
+.single-expert-card h3 {
+  text-align: center;
+  color: #0c0c0c;
+}
+
+.single-expert-card h4 {
+  text-align: center;
+  color: #464646;
+  font-size: 16px;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.expert-thumbnail {
+  min-height: 260px;
+  background-position: center;
+  background-size: cover;
+}
+
 /* - PARTNERS */
 .resources-landing {
   background-color: #fff;
-  padding-top: 30px;
 }
 
 .partners-logos {

@@ -62,7 +62,7 @@ function bepf_expert_title()
 
 	?>
 	<label for="expert-title"></label>
-	<input id="expert-title" type="text" name=expert_title value="<?php echo $title ?>">
+	<input id="expert-title" type="text" name=expert_title value="<?php echo esc_attr($title); ?>">
 	<?php
 
 }
