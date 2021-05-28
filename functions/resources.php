@@ -62,8 +62,13 @@ function bepf_get_view_statistics(array $posts): array
  */
 function bepf_modify_main_query($query)
 {
-	if ($query->is_post_type_archive('expert') && $query->is_main_query() ) {
-		$query->query_vars['posts_per_page'] = -1;
+	if ($query->is_main_query()) {
+		if ($query->is_post_type_archive('expert') ) {
+			$query->query_vars['posts_per_page'] = -1;
+		} elseif ($query->is_tax('resource-type')) {
+			$query->query_vars['posts_per_page'] = -1;
+			$query->query_vars['post_type'][] = 'resources';
+		}
 	}
 }
 
