@@ -32,3 +32,26 @@ function bepf_get_resource(int $count, string $taxonomy): array
 	}
 	return $posts;
 }
+
+function bepf_get_view_statistics(array $posts): array
+{
+	$post_ids = array_map(static function($e){
+		return $e->ID;
+	}, $posts);
+	$post_ids = implode(',', $post_ids);
+
+	global $wpdb;
+	$sql ="SELECT postnum AS ID, postcount AS total FROM {$wpdb->prefix}pvc_total WHERE postnum IN ($post_ids)";
+	$results = $wpdb->get_results($sql);
+	if (empty($results)) {
+		return [];
+	}
+
+	// transform the results into array with the post ID as a key
+	$stats = [];
+	foreach ($results as $post) {
+		$stats[$post->ID] = $post->total;
+	}
+	return $stats;
+
+}
