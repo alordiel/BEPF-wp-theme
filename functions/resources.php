@@ -35,13 +35,13 @@ function bepf_get_resource(int $count, string $taxonomy): array
 
 function bepf_get_view_statistics(array $posts): array
 {
-	$post_ids = array_map(static function($e){
+	$post_ids = array_map(static function ($e) {
 		return $e->ID;
 	}, $posts);
 	$post_ids = implode(',', $post_ids);
 
 	global $wpdb;
-	$sql ="SELECT postnum AS ID, postcount AS total FROM {$wpdb->prefix}pvc_total WHERE postnum IN ($post_ids)";
+	$sql = "SELECT postnum AS ID, postcount AS total FROM {$wpdb->prefix}pvc_total WHERE postnum IN ($post_ids)";
 	$results = $wpdb->get_results($sql);
 	if (empty($results)) {
 		return [];
@@ -55,3 +55,17 @@ function bepf_get_view_statistics(array $posts): array
 	return $stats;
 
 }
+
+/**
+ * Show all experts on the archive page
+ * @param $query
+ */
+function bepf_modify_main_query($query)
+{
+	if ($query->is_post_type_archive('expert') && $query->is_main_query() ) {
+		$query->query_vars['posts_per_page'] = -1;
+	}
+}
+
+// Hook my above function to the pre_get_posts action
+add_action('pre_get_posts', 'bepf_modify_main_query');

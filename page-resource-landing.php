@@ -63,7 +63,7 @@ $resources = [
 			<?php endif; ?>
 		<?php endforeach; ?>
 		<div class="container">
-			<a href="" class="like-orange-button">Всички ресурси</a>
+			<a href="/resources" class="like-orange-button" title="към всички ресурси">Всички ресурси</a>
 			<div class="end-line"></div>
 		</div>
 		<?php if ($experts !== []) : ?>
@@ -84,6 +84,10 @@ $resources = [
 				</div>
 			</div>
 		<?php endif; ?>
+		<div class="container mb-5">
+			<a href="/expert" class="like-orange-button" title="към всички експерти">Всички експерти</a>
+			<div class="end-line"></div>
+		</div>
 
 		<div class="partner container">
 			<h2 class="text-center">Партньори</h2>
