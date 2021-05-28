@@ -207,23 +207,6 @@ function add_class_attachment_link($html)
 
 add_filter('wp_get_attachment_link', 'add_class_attachment_link', 10, 1);
 
-/*
-// Add lead class to first paragraph
-  function first_paragraph( $content ){
-  	global $post;
-
-    // if we're on the homepage, don't add the lead class to the first paragraph of text
-  	if( is_page_template( 'page-homepage.php' ) )
-  		return $content;
-  	else
-  		return preg_replace('/<p([^>]+)?>/', '<p$1 class="lead">', $content, 1);
-  }
-  add_filter( 'the_content', 'first_paragraph' );
-
-  add_editor_style('editor-style.css');
-*/
-
-// Add Twitter Bootstrap's standard 'active' class name to the active nav link item
 add_filter('nav_menu_css_class', 'add_active_class', 10, 2);
 
 function add_active_class($classes, $item)
@@ -235,60 +218,14 @@ function add_active_class($classes, $item)
 	return $classes;
 }
 
-// enqueue styles
-if (!function_exists("theme_styles")) {
-	function theme_styles()
-	{
-		// This is the compiled css file from LESS - this means you compile the LESS file locally and put it in the appropriate directory if you want to make any changes to the master bootstrap.css.
-		wp_register_style('webfonts', 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,700,800&subset=cyrillic', array(), '1.0', 'all');
-		wp_enqueue_style('webfonts');
-
-		wp_register_style('bootstrap', get_template_directory_uri() . '/lib/css/ecs.min.css', array(), '1.0', 'all');
-		wp_enqueue_style('bootstrap');
-
-		// For child themes
-		wp_register_style('wpbs-style', get_stylesheet_directory_uri() . '/style.css', array(), '1.0', 'all');
-		wp_enqueue_style('wpbs-style');
-	}
-}
-add_action('wp_enqueue_scripts', 'theme_styles');
-
-// enqueue javascript
-if (!function_exists("theme_js")) {
-	function theme_js()
-	{
-
-		wp_register_script('bootstrap',
-			get_template_directory_uri() . '/lib/js/bootstrap.min.js',
-			array('jquery'),
-			'1.2');
-
-		wp_register_script('bepf-scripts',
-			get_template_directory_uri() . '/lib/js/scripts.js',
-			array('jquery'),
-			'1.2');
-
-		wp_register_script('modernizr',
-			get_template_directory_uri() . '/lib/js/modernizr.full.min.js',
-			array('jquery'),
-			'1.2');
-
-		wp_register_script('matchheight',
-			get_template_directory_uri() . '/lib/js/jquery.matchHeight-min.js',
-			array('jquery'),
-			'1.2');
-
-		wp_enqueue_script('bootstrap');
-		wp_enqueue_script('webfont');
-		wp_enqueue_script('bepf-scripts');
-		//wp_enqueue_script('modernizr');
-		wp_enqueue_script('matchheight');
-
-	}
-}
-add_action('wp_enqueue_scripts', 'theme_js');
 
 function dbga($something)
 {
 	error_log(print_r($something, true));
+}
+
+
+function is_resources_page($page_template): bool
+{
+	return (is_singular('resource') || in_array($page_template, ['page-resource-landing.php', 'page-resources-filters.php']));
 }

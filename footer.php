@@ -4,9 +4,9 @@
 		<div id="footer-container">
 
 				<footer role="contentinfo">
-				
+
 					<div id="inner-footer" class="container clearfix">
-						
+
 			          <div id="widget-footer" class="clearfix row">
 			            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer1') ) : ?>
 			            <?php endif; ?>
@@ -17,11 +17,11 @@
 			            <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer4') ) : ?>
 			            <?php endif; ?>
 			          </div>
-						
+
 						<nav class="clearfix">
 							<?php wp_bootstrap_footer_links(); // Adjust using Menus in Wordpress Admin ?>
 						</nav>
-					
+
 					</div> <!-- end #inner-footer -->
 
 					<div class="container-attribution">
@@ -37,8 +37,8 @@
 				</footer> <!-- end footer -->
 
 		</div> <!-- Ends footer-container -->
-			
-		<?php wp_footer(); // js scripts are inserted using this function ?>
+
+		<?php wp_footer();?>
 
 	</body>
 
