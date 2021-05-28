@@ -14,7 +14,7 @@ get_header('resource');
 				$article_date = the_date('', '', '', false) ?: $article_date;
 				$post_id = get_the_ID();
 				?>
-				<article id="post-<?php echo $post_id; ?>" <?php post_class('clearfix'); ?> role="article">
+				<article id="post-<?php echo $post_id; ?>">
 
 					<div class="row container-news-excerpts">
 						<div class="col-xs-12 col-sm-3">
