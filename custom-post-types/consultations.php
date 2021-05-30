@@ -41,8 +41,8 @@ function bepf_add_experts()
 	register_post_type('expert', $args);
 }
 
-add_action('add_meta_boxes', 'wpse_add_custom_meta_box_2');
-function wpse_add_custom_meta_box_2()
+add_action('add_meta_boxes', 'bepf_add_custom_meta_box_for_expert_title');
+function bepf_add_custom_meta_box_for_expert_title()
 {
 	add_meta_box(
 		'lessons_number',

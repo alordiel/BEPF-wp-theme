@@ -6,7 +6,7 @@ get_header('resource');
 	<div class="container">
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			<?php  $post_id = get_the_ID();?>
+			<?php $post_id = get_the_ID(); ?>
 			<article class="mt-3">
 
 				<header class="text-center">
@@ -43,7 +43,41 @@ get_header('resource');
 					<?php the_content(); ?>
 				</section> <!-- end article section -->
 			</article> <!-- end article -->
+		<?php if ($type[0]->slug === 'videos') : ?>
+			<script src="https://player.vimeo.com/api/player.js"></script>
+			<script>
+				jQuery(function ($) {
 
+					$('section').on('click', 'iframe', function () {
+						console.log('clicked');
+						$.ajax({
+							method: 'POST',
+							post_id: <?php echo $post_id ?>,
+							action: 'record_vimeo_watch'
+						});
+					});
+					var iframe = document.querySelector('iframe');
+					var player = new Vimeo.Player(iframe);
+					var isTracked = false
+
+					player.on('play', function () {
+						if (!isTracked) {
+							isTracked = true;
+							$.ajax({
+								url: '<?php echo admin_url("admin-ajax.php"); ?>',
+								method: 'POST',
+								data: {
+									post_id: <?php echo $post_id ?>,
+									action: 'record_vimeo_watch',
+									dataType: 'JSON',
+								},
+							});
+						}
+
+					});
+				});
+			</script>
+		<?php endif; ?>
 		<?php endwhile; ?>
 		<?php endif; ?>
 	</div> <!-- end #main -->

@@ -70,3 +70,29 @@ function bepf_resources_taxonomy() {
     )
   );
 }
+
+
+add_action('add_meta_boxes', 'bepf_add_meta_box_for_video_views');
+function bepf_add_meta_box_for_video_views()
+{
+	add_meta_box(
+		'video_watches',
+		__('Number of video views', 'bepf'),
+		'bepf_video_unique_count',
+		'resources',
+		'side',
+		'high'
+	);
+}
+
+//showing custom form fields
+function bepf_video_unique_count()
+{
+	global $post;
+
+	$type = get_the_terms($post->ID, 'resource-type');
+	if ($type[0]->slug === 'videos') {
+		$count = get_post_meta($post->ID, 'video_watches', true);
+		echo  "<p>Video was viewed: {$count['total']}</p>";
+	}
+}
