@@ -85,7 +85,7 @@ $resources = [
 			</div>
 		<?php endif; ?>
 		<div class="container mb-5">
-			<a href="/konsultacii" class="like-orange-button" title="към всички експерти">Всички експерти</a>
+			<a href="/expert" class="like-orange-button" title="към всички експерти">Всички експерти</a>
 			<div class="end-line"></div>
 		</div>
 	</section>
