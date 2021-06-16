@@ -44,6 +44,7 @@ get_header('resource');
 				</section> <!-- end article section -->
 			</article> <!-- end article -->
 		<?php if ($type[0]->slug === 'videos') : ?>
+
 			<script src="https://player.vimeo.com/api/player.js"></script>
 			<script>
 				jQuery(function ($) {
