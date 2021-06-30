@@ -16,9 +16,11 @@ h1, h2, h3, h4, h5, h6 {
 div, p, ul, li, a, span {
   font-family: 'Roboto Slab', sans-serif;
 }
+
 img {
   max-width: 100%;
 }
+
 /* HEADER SECTION */
 .navigation {
   border-bottom: 1px solid #ccc;
@@ -114,6 +116,10 @@ img {
 .our-vision h2 {
   color: #fff;
 }
+/* hide the 'Category' from the title of the archive pages  */
+.archive.tax-resource-type h1 > span {
+  display: none;
+}
 
 /* - LATEST RESOURCES */
 .our-resources.container {
@@ -168,6 +174,7 @@ img {
 .number-of-views {
   color: #000;
   display: flex;
+  padding-left: 20px;
 }
 
 .number-of-views svg {
@@ -252,6 +259,10 @@ img {
   padding: 25px 0;
 }
 
+.partners-logos img {
+  max-width: 20%;
+}
+
 /* ARCHIVE - Resources*/
 .container-news-excerpts {
   padding-bottom: 10px;
@@ -273,23 +284,44 @@ img {
   background-color: #f47822;
 }
 
+.single .label-date {
+  width: 100px;
+  display: block;
+}
+
 .label-taxonomy {
   display: block;
   padding: .2em .6em .3rem 0;
   white-space: nowrap;
   color: #404040;
+  text-align: left;
 }
+
 .pagination {
   justify-content: center;
 }
+
 .pagination li {
   border: 1px solid #f47822;
   padding: 5px 8px;
 }
+
 .pagination li.active {
   border: 1px solid #6f6f6f;
   padding: 5px 8px;
 }
+
+@media (max-width: 900px) {
+  .partners-logos {
+    justify-content: center;
+  }
+
+  .partners-logos img {
+    max-width: 200px;
+    margin: 0 10px 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .donors-logos {
     padding: 0 15px;
@@ -320,14 +352,10 @@ img {
     margin-bottom: 0;
   }
 
-  .resources-menu-class .menu,
-  .partners-logos {
+  .resources-menu-class .menu {
     justify-content: center;
   }
 
-  .partners-logos img {
-    margin: 0 10px 20px;
-  }
 
   .resources-menu-class .menu li {
     padding: 1rem;

@@ -1,12 +1,23 @@
 <?php
 get_header('resource');
+$description_id = get_option('experts-description');
 ?>
 	<div id="main" class="container" role="main">
 
 		<div class="page-header">
 			<h1 class="text-center my-5">
-				<span>Експерти</span>
+				<span>Попитай експертите!</span>
 			</h1>
+			<?php if (!empty($description_id)): ?>
+				<div class="well">
+					<?php
+					$post = get_post($description_id);
+					if (!empty($post)) {
+						echo apply_filters('the_content', $post->post_content);
+					}
+					?>
+				</div>
+			<?php endif; ?>
 
 			<?php $article_date = ''; ?>
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -37,7 +48,8 @@ get_header('resource');
 										<?php the_title(); ?>
 									</a>
 								</h3>
-								<span class="label-taxonomy mb-3"> <?php echo get_post_meta($post_id, 'expert_title', true); ?></span>
+								<span
+									class="label-taxonomy mb-3"> <?php echo get_post_meta($post_id, 'expert_title', true); ?></span>
 							</header>
 
 							<section class="post-content">
