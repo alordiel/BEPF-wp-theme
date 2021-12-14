@@ -80,6 +80,10 @@ Template Name: [ДСК] Финалисти Вековни
 													</p>
 												<?php endif; ?>
 
+													<p>
+														<i class="fa fa-fw fa-thumbs-up text-success"></i><?php echo get_votes_for(get_field('tree_id'), 20); ?>
+													</p>
+
 												<?php the_excerpt(); ?>
 
 											</div>

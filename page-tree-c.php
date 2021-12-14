@@ -24,7 +24,13 @@ Template Name: [ДСК] Единично дърво Вековно
 					</header> <!-- end article header -->
 
 					<section class="post_content">
-
+						<?php
+						$image_thumbnail_id = get_post_thumbnail_id($post->ID);
+						$image = wp_get_attachment_image_src($image_thumbnail_id, 'full');
+						?>
+						<div class="row">
+							<img class="img-responsive mb-3" src='<?php echo $image['0']; ?>' alt="<?php echo get_the_title(); ?>"/>
+						</div>
 						<?php if (get_field('tree_type')) : ?>
 							<p class=""><span
 									class="label label-warning"><?php _e("Tree type:", "wpbootstrap"); ?></span> <?php the_field('tree_type'); ?>
@@ -46,8 +52,9 @@ Template Name: [ДСК] Единично дърво Вековно
 							</p>
 						<?php endif; ?>
 						<!-- ACTIVE! -->
-						<p><span
-								class="label label-default"><?php _e("No of votes:", "wpbootstrap"); ?></span>&nbsp;<span
+						<p>
+							<span class="label label-default"><?php _e("No of votes:", "wpbootstrap"); ?></span>&nbsp;
+							<span
 								class="text-success"><strong><?php echo get_votes_for(get_field('tree_id'), 20); ?></strong></span>
 						</p>
 

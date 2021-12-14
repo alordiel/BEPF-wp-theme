@@ -54,6 +54,7 @@ Template Name: [ДСК] Финалисти 2021
 								setup_postdata($post);
 								$image_thumbnail_id = get_post_thumbnail_id($post->ID);
 								$image = wp_get_attachment_image_src($image_thumbnail_id, 'thumb-300');
+								$tree_id = get_field('tree_id');
 
 								?>
 
@@ -85,12 +86,10 @@ Template Name: [ДСК] Финалисти 2021
 															class="fa fa-fw fa-user-plus"></i><?php the_field('tree_nominator'); ?>
 													</p>
 												<?php endif; ?>
-												<?php if (get_field('tree_votes_display') == false) : ?>
-													<!-- ACTIVE! need to be commented out later on -->
-													<p>
-														<i class="fa fa-fw fa-thumbs-up text-success"></i><?php echo get_votes_for(get_field('tree_id'), 19); ?>
-													</p>
-												<?php endif; ?>
+												<!-- ACTIVE! need to be commented out later on -->
+												<p>
+													<i class="fa fa-fw fa-thumbs-up text-success"></i><?php echo get_votes_for($tree_id, 19); ?>
+												</p>
 
 												<a href="<?php the_permalink(); ?>" style="display:block"
 												   title="виж повече">прочетете повече</a><br>
@@ -98,10 +97,13 @@ Template Name: [ДСК] Финалисти 2021
 											</div>
 											<?php // ACTIVE! here we display the button for vote
 											?>
-											<?php if (get_field('tree_id')) : ?>
-												<?php $vote_link = home_url() . '/дърво-с-корен/treec-voting?tree_id=' . get_field('tree_id'); ?>
-												<a class="btn-vote" href="<?php echo $vote_link ?>"><img
-														src="<?php echo get_template_directory_uri(); ?>/lib/images/btn-vote-for.png"/></a>
+											<?php if ($tree_id) : ?>
+												<?php $vote_link = home_url() . '/дърво-с-корен/treec-voting?tree_id=' . $tree_id; ?>
+												<a class="btn-vote" href="<?php echo $vote_link ?>">
+													<img
+														src="<?php echo get_template_directory_uri(); ?>/lib/images/btn-vote-for.png"
+														alt="vote-for-button"/>
+												</a>
 											<?php endif; ?>
 
 										</div>
