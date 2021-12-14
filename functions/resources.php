@@ -89,7 +89,7 @@ function bepf_record_vimeo_watch()
 			'IPs' => [$user_ip],
 			'total' => 1,
 		];
-		update_post_meta($_POST['post_id'],'video_watches', $video_stats);
+		update_post_meta($_POST['post_id'], 'video_watches', $video_stats);
 		die(2);
 
 	}
@@ -98,9 +98,9 @@ function bepf_record_vimeo_watch()
 		$video_stats['IPs'][] = $user_ip;
 		$video_stats = [
 			'IPs' => $video_stats['IPs'],
-			'total' => $video_stats['total'] ++,
+			'total' => $video_stats['total']++,
 		];
-		update_post_meta($_POST['post_id'],'video_watches', $video_stats);
+		update_post_meta($_POST['post_id'], 'video_watches', $video_stats);
 		die(1);
 	}
 }

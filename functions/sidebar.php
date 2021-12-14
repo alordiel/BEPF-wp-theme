@@ -1,7 +1,8 @@
 <?php
 
 // Sidebars & Widgetizes Areas
-function wp_bootstrap_register_sidebars() {
+function wp_bootstrap_register_sidebars()
+{
 	register_sidebar(array(
 		'id' => 'sidebar-left',
 		'name' => 'Left Sidebar',

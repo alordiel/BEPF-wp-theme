@@ -14,18 +14,20 @@ function bepf_add_google_analytics()
 
 function bepf_get_the_logo_icons(): string
 {
-	return "<link rel='apple-touch-icon' sizes='60x60' href='".BEPF_REL_PATH."/lib/images/apple-touch-icon-60x60.png'>
-	<link rel='apple-touch-icon' sizes='76x76' href='".BEPF_REL_PATH."/lib/images/apple-touch-icon-76x76.png'>
-	<link rel='apple-touch-icon' sizes='120x120' href='".BEPF_REL_PATH."/lib/images/apple-touch-icon-120x120.png'>
-	<link rel='apple-touch-icon' sizes='152x152' href='".BEPF_REL_PATH."/lib/images/apple-touch-icon-152x152.png'>
-	<link rel='apple-touch-icon' sizes='180x180' href='".BEPF_REL_PATH."/lib/images/apple-touch-icon-180x180.png'>
-	<link rel='icon' type='image/png' href='".BEPF_REL_PATH."/lib/images/android-chrome-192x192.png' sizes='192x192'>
-	<link rel='manifest' href='".BEPF_REL_PATH."/lib/images/manifest.json'>
-	<link rel='shortcut icon' href='".BEPF_REL_PATH."/lib/images/favicon.ico'>";
+	return "<link rel='apple-touch-icon' sizes='60x60' href='" . BEPF_REL_PATH . "/lib/images/apple-touch-icon-60x60.png'>
+	<link rel='apple-touch-icon' sizes='76x76' href='" . BEPF_REL_PATH . "/lib/images/apple-touch-icon-76x76.png'>
+	<link rel='apple-touch-icon' sizes='120x120' href='" . BEPF_REL_PATH . "/lib/images/apple-touch-icon-120x120.png'>
+	<link rel='apple-touch-icon' sizes='152x152' href='" . BEPF_REL_PATH . "/lib/images/apple-touch-icon-152x152.png'>
+	<link rel='apple-touch-icon' sizes='180x180' href='" . BEPF_REL_PATH . "/lib/images/apple-touch-icon-180x180.png'>
+	<link rel='icon' type='image/png' href='" . BEPF_REL_PATH . "/lib/images/android-chrome-192x192.png' sizes='192x192'>
+	<link rel='manifest' href='" . BEPF_REL_PATH . "/lib/images/manifest.json'>
+	<link rel='shortcut icon' href='" . BEPF_REL_PATH . "/lib/images/favicon.ico'>";
 }
 
 
-function bepf_resources_navigation_menu() {
-  register_nav_menu('resources-menu', __( 'Resources Menu', 'bepf' ) );
+function bepf_resources_navigation_menu()
+{
+	register_nav_menu('resources-menu', __('Resources Menu', 'bepf'));
 }
-add_action( 'init', 'bepf_resources_navigation_menu' );
+
+add_action('init', 'bepf_resources_navigation_menu');

@@ -31,15 +31,15 @@ $resources = [
 			<div class="latest-materials"></div>
 			<div class="latest-videos"></div>
 		</div>
-		
+
 		<?php foreach ($resources as $type => $data): ?>
 			<?php if ($data['entries'] !== []) : ?>
 				<div class="our-resources container">
 					<h2 class="text-center mb-5"><?php echo $data['title']; ?></h2>
 					<div class="resources-list">
-						<?php $view_stats = bepf_get_view_statistics($data['entries'])?>
+						<?php $view_stats = bepf_get_view_statistics($data['entries']) ?>
 						<?php foreach ($data['entries'] as $resource): ?>
-						<?php setup_postdata($resource); ?>
+							<?php setup_postdata($resource); ?>
 							<div class="single-resource-card">
 								<a href="<?php echo get_permalink($resource->ID); ?>"
 								   title="<?php echo $resource->post_title ?>">
@@ -56,14 +56,14 @@ $resources = [
 											<?php echo $view_stats[$resource->ID] ?? 0; ?>
 									</span>
 									<p>
-									<?php
-									    //  due to hook on excerpt_more we need to set up the current resource ID as post->ID
+										<?php
+										//  due to hook on excerpt_more we need to set up the current resource ID as post->ID
 										global $post;
 										$original_ID = $post->ID;
 										$post->ID = $resource->ID;
-										 echo get_the_excerpt($resource->ID); 
+										echo get_the_excerpt($resource->ID);
 										$post->ID = $original_ID;
-								    ?>
+										?>
 									</p>
 								</a>
 							</div>
@@ -73,12 +73,12 @@ $resources = [
 				</div>
 			<?php endif; ?>
 		<?php endforeach; ?>
-		
+
 		<div class="container">
 			<a href="/resources" class="like-orange-button" title="към всички ресурси">Всички ресурси</a>
 			<div class="end-line"></div>
 		</div>
-		
+
 		<?php if ($experts !== []) : ?>
 			<div class="our-experts container">
 				<h2 class="text-center my-5">Консултации</h2>

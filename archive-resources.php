@@ -8,7 +8,7 @@ get_header('resource');
 				<span>Ресурси</span>
 			</h1>
 
-			<?php include_once 'parts/content-archive-resources.php'	?>
+			<?php include_once 'parts/content-archive-resources.php' ?>
 		</div>
 	</div> <!-- end #main -->
 

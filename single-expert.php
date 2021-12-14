@@ -15,14 +15,16 @@ get_header('resource');
 
 					<div class="page-header mt-3 mb-5">
 						<h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1>
-						<span class="label-taxonomy mb-3"> <?php echo get_post_meta(get_the_ID(), 'expert_title', true); ?></span>
+						<span
+							class="label-taxonomy mb-3"> <?php echo get_post_meta(get_the_ID(), 'expert_title', true); ?></span>
 					</div>
 
 				</header> <!-- end article header -->
 
 				<section class="post_content clearfix" itemprop="articleBody">
 					<?php the_content(); ?>
-					<a href="/expert" class="like-orange-button my-4" title="към всички експерти">Виж всички експерти</a>
+					<a href="/expert" class="like-orange-button my-4" title="към всички експерти">Виж всички
+						експерти</a>
 				</section> <!-- end article section -->
 			</article> <!-- end article -->
 

@@ -1,23 +1,23 @@
-				<div id="sidebar-right" class="col-md-3 secondary-sidebar" role="complementary">
-				
-					<?php if ( is_active_sidebar( 'sidebar-twr-right' ) ) : ?>
+<div id="sidebar-right" class="col-md-3 secondary-sidebar" role="complementary">
 
-						<div class="row clearfix">
+	<?php if (is_active_sidebar('sidebar-twr-right')) : ?>
 
-							<?php dynamic_sidebar( 'sidebar-twr-right' ); ?>
+		<div class="row clearfix">
 
-						</div>
+			<?php dynamic_sidebar('sidebar-twr-right'); ?>
 
-					<?php else : ?>
+		</div>
 
-						<!-- This content shows up if there are no widgets defined in the backend. -->
-						
-						<div class="alert alert-message">
-						
-							<p><?php _e("Please activate some Widgets","wpbootstrap"); ?>.</p>
-						
-						</div>
+	<?php else : ?>
 
-					<?php endif; ?>
+		<!-- This content shows up if there are no widgets defined in the backend. -->
 
-				</div>
+		<div class="alert alert-message">
+
+			<p><?php _e("Please activate some Widgets", "wpbootstrap"); ?>.</p>
+
+		</div>
+
+	<?php endif; ?>
+
+</div>

@@ -116,6 +116,7 @@ img {
 .our-vision h2 {
   color: #fff;
 }
+
 /* hide the 'Category' from the title of the archive pages  */
 .archive.tax-resource-type h1 > span {
   display: none;
@@ -149,11 +150,11 @@ img {
   margin: 0 10px;
 }
 
-.single-resource-card:first-child{
+.single-resource-card:first-child {
   margin-left: 0;
 }
 
-.single-resource-card:last-child{
+.single-resource-card:last-child {
   margin-right: 0;
 }
 
