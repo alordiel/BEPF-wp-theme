@@ -7,21 +7,21 @@ Template Name: [ДСК] Финалисти Вековни
 <?php get_header('twr'); ?>
 
 	<div class="container">
-			
+
 			<div id="content" class="row clearfix">
 
 				<div id="main" class="col-md-9 clearfix" role="main">
-				
+
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					
+
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
-						
+
 						<header>
-							
+
 							<div class="page-header"><h1><?php the_title(); ?></h1></div>
-						
+
 						</header> <!-- end article header -->
-					
+
 						<section class="post_content">
 
 							<?php the_content(); ?>
@@ -47,14 +47,14 @@ Template Name: [ДСК] Финалисти Вековни
 										)
 									);
 									while ( have_posts() ) : the_post(); ?>
-										
+
 										<div class="col-xs-12 col-md-4 col-tree">
 											<div class="row">
 												<div class="col-xs-12 col-sm-5 col-md-4 col-lg-12">
 													<img class="img-responsive" <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumb-300' );
 																echo "src='" . $image['0'] . "'"; ?>/>
 												</div>
-												
+
 												<div class="col-xs-12 col-sm-7 col-md-8 col-lg-12">
 													<div class="tree-excerpt">
 														<h2 class="h3"><?php the_title(); ?></h2>
@@ -72,26 +72,26 @@ Template Name: [ДСК] Финалисти Вековни
 														<?php endif; ?>
 
 														<?php the_excerpt(); ?>
-														
+
 													</div>
 
-												
+
 													<?php if( get_field('tree_id') ): ?>
-													<!-- 	<a class="" href="https://bepf-bg.org/%D0%B4%D1%8A%D1%80%D0%B2%D0%BE-%D1%81-%D0%BA%D0%BE%D1%80%D0%B5%D0%BD/%D0%B3%D0%BB%D0%B0%D1%81%D1%83%D0%B2%D0%B0%D0%BD%D0%B5-%D0%B7%D0%B0-%D0%B2%D0%B5%D0%BA%D0%BE%D0%B2%D0%BD%D0%B8%D1%82%D0%B5-%D0%B4%D1%8A%D1%80%D0%B2%D0%B5%D1%82%D0%B0?tree_id=<?php the_field( 'tree_id' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/lib/images/btn-vote-for.png" /></a> -->
+													<a class="" href="https://bepf-bg.org/%D0%B4%D1%8A%D1%80%D0%B2%D0%BE-%D1%81-%D0%BA%D0%BE%D1%80%D0%B5%D0%BD/%D0%B3%D0%BB%D0%B0%D1%81%D1%83%D0%B2%D0%B0%D0%BD%D0%B5-%D0%B7%D0%B0-%D0%B2%D0%B5%D0%BA%D0%BE%D0%B2%D0%BD%D0%B8%D1%82%D0%B5-%D0%B4%D1%8A%D1%80%D0%B2%D0%B5%D1%82%D0%B0?tree_id=<?php the_field( 'tree_id' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/lib/images/btn-vote-for.png" /></a>
 													<?php endif; ?>
 
 												</div>
-													
+
 												</div>
 												<hr>
 											</div>
-		
-							        <?php endwhile; 
-										  wp_reset_query(); 
+
+							        <?php endwhile;
+										  wp_reset_query();
 									?>
 									<!-- Loop Ends -->
 								</div>
-								
+
 								<div class="row">
 									<div class="col-xs-12">
 										<?php if( get_field('tree-c-title') ): ?>
@@ -99,7 +99,7 @@ Template Name: [ДСК] Финалисти Вековни
 										<?php endif; ?>
 									</div>
 								</div>
-								
+
 						</section> <!-- end article section -->
 
 						<script type="text/javascript">
@@ -107,19 +107,19 @@ Template Name: [ДСК] Финалисти Вековни
 							    jQuery('.tree-excerpt').matchHeight();
 							});
 						</script>
-						
+
 						<footer>
-			
+
 							<p class="clearfix"><?php the_tags('<span class="tags">' . __("Tags","wpbootstrap") . ': ', ', ', '</span>'); ?></p>
-							
+
 						</footer> <!-- end article footer -->
-					
+
 					</article> <!-- end article -->
-					
-					<?php endwhile; ?>	
-					
+
+					<?php endwhile; ?>
+
 					<?php else : ?>
-					
+
 					<article id="post-not-found">
 					    <header>
 					    	<h1><?php _e("Not Found", "wpbootstrap"); ?></h1>
@@ -130,13 +130,13 @@ Template Name: [ДСК] Финалисти Вековни
 					    <footer>
 					    </footer>
 					</article>
-					
+
 					<?php endif; ?>
-			
+
 				</div> <!-- end #main -->
 
 				<?php get_sidebar('sidebar-twr-right'); // sidebar right ?>
-				
+
 			</div> <!-- end #content -->
 
 		</div> <!-- end .container -->

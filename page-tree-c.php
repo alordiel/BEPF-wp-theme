@@ -38,13 +38,13 @@ Template Name: [ДСК] Единично дърво Вековно
 							<p class=""><span class="label label-warning"><?php _e("Nominator:", "wpbootstrap"); ?></span> <?php the_field('tree_nominator'); ?></p>
 						<?php endif; ?>
 						<!-- ACTIVE! -->
-						<!-- <p><span class="label label-default"><?php _e("No of votes:", "wpbootstrap"); ?></span>&nbsp;<span class="text-success"><strong><?php echo get_votes_for(get_field('tree_id'), 20); ?></strong></span></p> -->
+						<p><span class="label label-default"><?php _e("No of votes:", "wpbootstrap"); ?></span>&nbsp;<span class="text-success"><strong><?php echo get_votes_for(get_field('tree_id'), 20); ?></strong></span></p>
 
 						<hr>
 
-						<!-- <button type="submit" id="twr_vote" style="border: 0; background: transparent">
+						<button type="submit" id="twr_vote" style="border: 0; background: transparent">
 							<img src="<?php echo get_template_directory_uri(); ?>/lib/images/btn-vote-for.png" alt="Vote" />
-						</button> -->
+						</button>
 
 						<hr>
 
@@ -90,10 +90,10 @@ Template Name: [ДСК] Единично дърво Вековно
 
 	</div> <!-- end #main -->
 
-	<?php get_sidebar('sidebar-left'); //sidebar left 
+	<?php get_sidebar('sidebar-left'); //sidebar left
 	?>
 
-	<?php get_sidebar('sidebar-twr-right'); // sidebar right 
+	<?php get_sidebar('sidebar-twr-right'); // sidebar right
 	?>
 
 </div> <!-- end #content -->

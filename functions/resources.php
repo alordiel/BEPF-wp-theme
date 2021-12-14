@@ -4,7 +4,7 @@ function bepf_get_experts(int $count): array
 	$experts = get_posts([
 		'post_type' => 'expert',
 		'posts_per_page' => $count,
-		'post_status' => 'public',
+		'post_status' => 'publish',
 	]);
 	if (empty($experts)) {
 		return [];
@@ -17,7 +17,7 @@ function bepf_get_resource(int $count, string $taxonomy): array
 	$posts = get_posts([
 		'post_type' => 'resources',
 		'posts_per_page' => $count,
-		'post_status' => 'public',
+		'post_status' => 'publish',
 		'tax_query' => [
 			[
 				'taxonomy' => 'resource-type',

@@ -135,7 +135,7 @@ img {
 
 .resources-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 50px;
 }
 
@@ -146,6 +146,15 @@ img {
   background-color: #f7f7f7;
   border: 1px solid #777;
   border-radius: 5px;
+  margin: 0 10px;
+}
+
+.single-resource-card:first-child{
+  margin-left: 0;
+}
+
+.single-resource-card:last-child{
+  margin-right: 0;
 }
 
 .single-resource-card p {

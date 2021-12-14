@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ecosociety\n"
 "POT-Creation-Date: 2016-09-10 13:43+0300\n"
-"PO-Revision-Date: 2021-08-02 10:01+0000\n"
+"PO-Revision-Date: 2021-07-30 09:05+0000\n"
 "Last-Translator: Алекс Василев\n"
 "Language-Team: Bulgarian\n"
 "Language: bg_BG\n"
@@ -166,7 +166,7 @@ msgstr "Все още няма публикации"
 
 #: archive.php:106 author.php:72
 msgid "Sorry, What you were looking for is not here."
-msgstr "Съжаляваме, но това, което търсите, не е намерено."
+msgstr "Съжалавяме, но това, което търсите не е намерено"
 
 #: attachment.php:15 author.php:31 search.php:19
 msgid "Posted"
