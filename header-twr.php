@@ -129,7 +129,7 @@
 					</li>
 				</ul>
 
-				<?php echo qtranxf_generateLanguageSelectCode('text'); ?>
+				<?php if(function_exists('qtranxf_generateLanguageSelectCode')) { echo qtranxf_generateLanguageSelectCode('text'); } ?>
 				<script>jQuery(document).ready(function () {
 						jQuery('.qtranxs_language_chooser').addClass('nav navbar-nav');
 					})
