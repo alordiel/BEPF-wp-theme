@@ -50,15 +50,19 @@ Template Name: [ДСК] Начална
 					<div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
 						<div class="twr-home-page-image text-center">
 							<h2 style="display:none;color: #fff;font-size: 3rem;font-weight: bold;margin-top: 55px;">
-								Дърво с корен 2021</h2>
-							<!-- ACTIVE! this one below shows the button for voting -->
-							<?php // twr-home-vote-link can be edit in the current page ?>
-							<!--  <a style="visibility: visible" href="<?php echo get_permalink(5166); ?>"><img class="img-responsive" src="<?php the_field('twr-home-vote-image'); ?>"></a> -->
-							<!-- <h2><a href="https://www.treeoftheyear.org/Hlasovani?lang=bg-BG" style="font-size: 3rem;font-weight: bold;color: #fff;padding: 10px 10px 15px;display: inline-block;border: 3px solid #fff; margin-bottom: 10px;">Гласувай за любимо дърво на Европа</a></h2> -->
-							<!-- <a style="visibility: visible" href="<?php echo get_permalink(5166); ?>"></a> -->
-							<img
-								src="https://bepf-bg.org/bepf2015/wp-content/uploads/2017/09/ety_logo_RGB_PNG_1primary2.png"
-								alt="Дърво с корен - лого" width="300">
+								Дърво с корен 2021
+							</h2>
+
+							 <a style="visibility: visible" href="<?php echo get_permalink(6156); ?>">
+								 <img class="img-responsive" src="https://bepf-bg.org/bepf2015/wp-content/uploads/2017/09/btn-vote-twr.png" alt="Гласува за Дърво с корен">
+							 </a>
+							 <!--<h2>
+								<a href="https://www.treeoftheyear.org/Hlasovani?lang=bg-BG" style="font-size: 3rem;font-weight: bold;color: #fff;padding: 10px 10px 15px;display: inline-block;border: 3px solid #fff; margin-bottom: 10px;">
+									Гласувай за любимо дърво на Европа
+								</a>
+							 </h2>-->
+							<!--<img src="https://bepf-bg.org/bepf2015/wp-content/uploads/2017/09/ety_logo_RGB_PNG_1primary2.png"
+								alt="Дърво с корен - лого" width="300">-->
 						</div>
 					</div>
 

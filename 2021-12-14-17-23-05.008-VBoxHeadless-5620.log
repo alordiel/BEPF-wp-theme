@@ -1,0 +1,12 @@
+Log created: 2021-12-14T17:23:05.085959000Z
+Process ID:  5620 (0x15f4)
+Parent PID:  1 (0x1)
+Executable:  /usr/lib/virtualbox/VBoxHeadless
+Arg[0]: /usr/lib/virtualbox/VBoxHeadless
+Arg[1]: --comment
+Arg[2]: VVV_3699302b51d
+Arg[3]: --startvm
+Arg[4]: 6c6aefbb-cc98-44fc-8d8e-75567704cdb2
+Arg[5]: --vrde
+Arg[6]: config
+AddRef: illegal refcnt=3221225469 state=2
