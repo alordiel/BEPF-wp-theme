@@ -51,7 +51,7 @@ Template Name: [ДСК] Начална
 					<div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
 						<div class="twr-home-page-image text-center">
 							<h2 style="display:none;color: #fff;font-size: 3rem;font-weight: bold;margin-top: 55px;">
-								Дърво с корен 2021
+								Дърво с корен 2022
 							</h2>
 
 						<!-- 	 <a style="visibility: visible" href="<?php echo get_permalink(6156); ?>">
