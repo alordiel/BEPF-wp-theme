@@ -185,9 +185,9 @@ Template Name: [ДСК] Финалисти 2022
 												<?php endif; ?>
 												<?php if (get_field('tree_votes_display') == false) : ?>
 													<!-- ACTIVE! need to be commented out at some point -->
-													<!-- <p>
+													<p>
 														<i class="fa fa-fw fa-thumbs-up text-success"></i><?php echo get_votes_for(get_field('tree_id'), 20); ?>
-													</p> -->
+													</p>
 												<?php endif; ?>
 
 												<a href="<?php the_permalink(); ?>" style="display:block"
