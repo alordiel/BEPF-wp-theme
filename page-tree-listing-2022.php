@@ -183,12 +183,10 @@ Template Name: [ДСК] Финалисти 2022
 															class="fa fa-fw fa-user-plus"></i><?php the_field('tree_nominator'); ?>
 													</p>
 												<?php endif; ?>
-												<?php if (get_field('tree_votes_display') == false) : ?>
-													<!-- ACTIVE! need to be commented out at some point -->
-													<p>
-														<i class="fa fa-fw fa-thumbs-up text-success"></i><?php echo get_votes_for(get_field('tree_id'), 20); ?>
-													</p>
-												<?php endif; ?>
+												<!-- ACTIVE! need to be commented out at some point -->
+												<p>
+													<i class="fa fa-fw fa-thumbs-up text-success"></i><?php echo get_votes_for(get_field('tree_id'), 20); ?>
+												</p>
 
 												<a href="<?php the_permalink(); ?>" style="display:block"
 												   title="виж повече">прочетете повече</a><br>
