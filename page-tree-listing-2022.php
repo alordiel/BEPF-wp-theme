@@ -87,9 +87,9 @@ Template Name: [ДСК] Финалисти 2022
 													</p>
 												<?php endif; ?>
 												<!-- ACTIVE! need to be commented out later on -->
-												<p>
-													<i class="fa fa-fw fa-thumbs-up text-success"></i><?php echo get_votes_for($tree_id, 19); ?>
-												</p>
+												<!--<p>
+													<i class="fa fa-fw fa-thumbs-up text-success"></i><?php /*echo get_votes_for($tree_id, 19); */?>
+												</p>-->
 
 												<a href="<?php the_permalink(); ?>" style="display:block"
 												   title="виж повече">прочетете повече</a><br>
@@ -184,9 +184,9 @@ Template Name: [ДСК] Финалисти 2022
 													</p>
 												<?php endif; ?>
 												<!-- ACTIVE! need to be commented out at some point -->
-												<p>
-													<i class="fa fa-fw fa-thumbs-up text-success"></i><?php echo get_votes_for(get_field('tree_id'), 20); ?>
-												</p>
+												<!--<p>
+													<i class="fa fa-fw fa-thumbs-up text-success"></i><?php /*echo get_votes_for(get_field('tree_id'), 20); */?>
+												</p>-->
 
 												<a href="<?php the_permalink(); ?>" style="display:block"
 												   title="виж повече">прочетете повече</a><br>

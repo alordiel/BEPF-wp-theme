@@ -84,9 +84,9 @@ Template Name: [ДСК] Финалисти Вековни
 															class="fa fa-fw fa-user-plus text-success"></i><?php the_field('tree_nominator'); ?>
 													</p>
 												<?php endif; ?>
-												<p>
-													<i class="fa fa-fw fa-thumbs-up text-success"></i><?php echo get_votes_for(get_field('tree_id'), 20); ?>
-												</p>
+											<!--	<p>
+													<i class="fa fa-fw fa-thumbs-up text-success"></i><?php /*echo get_votes_for(get_field('tree_id'), 20); */?>
+												</p>-->
 
 												<?php the_excerpt(); ?>
 
