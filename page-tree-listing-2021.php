@@ -99,11 +99,11 @@ Template Name: [ДСК] Финалисти 2021
 											?>
 											<?php if ($tree_id) : ?>
 												<?php $vote_link = home_url() . '/дърво-с-корен/treec-voting?tree_id=' . $tree_id; ?>
-												<a class="btn-vote" href="<?php echo $vote_link ?>">
+												<!--<a class="btn-vote" href="<?php /*echo $vote_link */?>">
 													<img
-														src="<?php echo get_template_directory_uri(); ?>/lib/images/btn-vote-for.png"
+														src="<?php /*echo get_template_directory_uri(); */?>/lib/images/btn-vote-for.png"
 														alt="vote-for-button"/>
-												</a>
+												</a>-->
 											<?php endif; ?>
 
 										</div>
@@ -198,8 +198,8 @@ Template Name: [ДСК] Финалисти 2021
 											?>
 											<?php if (get_field('tree_id')) : ?>
 												<?php $vote_link = home_url() . '/дърво-с-корен/гласуване-за-вековните-дървета?tree_id=' . get_field('tree_id'); ?>
-												<a class="btn-vote-c" href="<?php echo $vote_link; ?>"><img
-														src="<?php echo get_template_directory_uri(); ?>/lib/images/btn-vote-for.png"/></a>
+<!--												<a class="btn-vote-c" href="--><?php //echo $vote_link; ?><!--"><img-->
+<!--														src="--><?php //echo get_template_directory_uri(); ?><!--/lib/images/btn-vote-for.png"/></a>-->
 											<?php endif; ?>
 
 										</div>

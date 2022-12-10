@@ -91,9 +91,9 @@ Template Name: [ДСК] Финалисти
 																 href="<?php the_permalink(); ?>"><?php _e("Read more &raquo;", "wpbootstrap"); ?></a>
 										</p>
 										<?php if (get_field('tree_id')): ?>
-											<a class=""
-											   href="http://bepf-bg.org/tree-voting?tree_id=<?php the_field('tree_id'); ?>"><img
-													src="<?php echo get_template_directory_uri(); ?>/lib/images/btn-vote-for.png"/></a>
+											<!--<a class=""
+											   href="http://bepf-bg.org/tree-voting?tree_id=<?php /*the_field('tree_id'); */?>"><img
+													src="<?php /*echo get_template_directory_uri(); */?>/lib/images/btn-vote-for.png"/></a>-->
 										<?php endif; ?>
 
 										<hr>
