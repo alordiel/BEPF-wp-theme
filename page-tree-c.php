@@ -46,12 +46,11 @@ Template Name: [ДСК] Единично дърво Вековно
 							</p>
 						<?php endif; ?>
 						<!-- ACTIVE! -->
-						<p>
-							<span class="label label-default"><?php _e("No of votes:", "wpbootstrap"); ?></span>&nbsp;
+						<!--<p>
+							<span class="label label-default"><?php /*_e("No of votes:", "wpbootstrap"); */?></span>&nbsp;
 							<span
-								class="text-success"><strong><?php echo get_votes_for(get_field('tree_id'), 20); ?></strong></span>
-						</p>
-
+								class="text-success"><strong><?php /*echo get_votes_for(get_field('tree_id'), 20); */?></strong></span>
+						</p>-->
 						<hr>
 
 						<button type="submit" id="twr_vote" style="border: 0; background: transparent">

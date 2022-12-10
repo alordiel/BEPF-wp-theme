@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: [ДСК] Финалисти 2021
+Template Name: [ДСК] Финалисти 2022
 */
 ?>
 
@@ -30,7 +30,7 @@ Template Name: [ДСК] Финалисти 2021
 
 						<div class="row">
 							<div class="col-xs-12">
-								<h2 class="h2-finalists">Дърво с корен, финалисти 2021 г.</h2>
+								<h2 class="h2-finalists">Дърво с корен, финалисти 2022 г.</h2>
 							</div>
 						</div>
 
@@ -41,8 +41,8 @@ Template Name: [ДСК] Финалисти 2021
 
 							$args = array(
 								'posts_per_page' => 11,
-								'post_parent' => 6156,
-								'post__not_in' => [6154],
+								'post_parent' => 6559,
+								'post__not_in' => [6560],
 								'post_type' => 'page',
 								'orderby' => 'menu_order'
 							);
@@ -87,9 +87,9 @@ Template Name: [ДСК] Финалисти 2021
 													</p>
 												<?php endif; ?>
 												<!-- ACTIVE! need to be commented out later on -->
-												<!-- <p>
-													<i class="fa fa-fw fa-thumbs-up text-success"></i><?php echo get_votes_for($tree_id, 19); ?>
-												</p> -->
+												<!--<p>
+													<i class="fa fa-fw fa-thumbs-up text-success"></i><?php /*echo get_votes_for($tree_id, 19); */?>
+												</p>-->
 
 												<a href="<?php the_permalink(); ?>" style="display:block"
 												   title="виж повече">прочетете повече</a><br>
@@ -99,11 +99,11 @@ Template Name: [ДСК] Финалисти 2021
 											?>
 											<?php if ($tree_id) : ?>
 												<?php $vote_link = home_url() . '/дърво-с-корен/treec-voting?tree_id=' . $tree_id; ?>
-												<!--<a class="btn-vote" href="<?php /*echo $vote_link */?>">
+												<a class="btn-vote" href="<?php echo $vote_link ?>">
 													<img
-														src="<?php /*echo get_template_directory_uri(); */?>/lib/images/btn-vote-for.png"
+														src="<?php echo get_template_directory_uri(); ?>/lib/images/btn-vote-for.png"
 														alt="vote-for-button"/>
-												</a>-->
+												</a>
 											<?php endif; ?>
 
 										</div>
@@ -133,7 +133,7 @@ Template Name: [ДСК] Финалисти 2021
 
 						<div class="row">
 							<div class="col-xs-12">
-								<h2 class="h2-finalists">Вековните дървета говорят, финалисти 2021 г.</h2>
+								<h2 class="h2-finalists">Вековните дървета говорят, финалисти 2022 г.</h2>
 							</div>
 						</div>
 
@@ -143,7 +143,7 @@ Template Name: [ДСК] Финалисти 2021
 
 							$args = array(
 								'showposts' => 10,
-								'post_parent' => 6154, //$this_page_id,
+								'post_parent' => 6560, //$this_page_id,
 								'post_type' => 'page',
 								'orderby' => 'menu_order'
 							);
@@ -183,12 +183,10 @@ Template Name: [ДСК] Финалисти 2021
 															class="fa fa-fw fa-user-plus"></i><?php the_field('tree_nominator'); ?>
 													</p>
 												<?php endif; ?>
-												<?php if (get_field('tree_votes_display') == false) : ?>
-													<!-- ACTIVE! need to be commented out at some point -->
-													<!-- <p>
-														<i class="fa fa-fw fa-thumbs-up text-success"></i><?php echo get_votes_for(get_field('tree_id'), 20); ?>
-													</p> -->
-												<?php endif; ?>
+												<!-- ACTIVE! need to be commented out at some point -->
+												<!--<p>
+													<i class="fa fa-fw fa-thumbs-up text-success"></i><?php /*echo get_votes_for(get_field('tree_id'), 20); */?>
+												</p>-->
 
 												<a href="<?php the_permalink(); ?>" style="display:block"
 												   title="виж повече">прочетете повече</a><br>
@@ -198,8 +196,8 @@ Template Name: [ДСК] Финалисти 2021
 											?>
 											<?php if (get_field('tree_id')) : ?>
 												<?php $vote_link = home_url() . '/дърво-с-корен/гласуване-за-вековните-дървета?tree_id=' . get_field('tree_id'); ?>
-												<!-- <a class="btn-vote-c" href="<?php echo $vote_link; ?>"><img
-														src="<?php //echo get_template_directory_uri(); ?>/lib/images/btn-vote-for.png"/></a> -->
+												<a class="btn-vote-c" href="<?php echo $vote_link; ?>"><img
+														src="<?php echo get_template_directory_uri(); ?>/lib/images/btn-vote-for.png"/></a>
 											<?php endif; ?>
 
 										</div>
