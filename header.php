@@ -7,7 +7,7 @@
 	<?php echo bepf_get_the_logo_icons() ?>
 	<?php wp_head(); ?>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/lib/css/ecs-overrides.min.css">
-
+	<meta name="facebook-domain-verification" content="kgbpbcnkecyp7j1jhk958wlktsxo44" />
 </head>
 <body <?php body_class("ecs-site"); ?>>
 <header role="banner">
