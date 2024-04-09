@@ -133,6 +133,8 @@ Template Name: Homepage
 
 		<?php endif; ?>
 
+		<?php the_content(); ?>
+
 	</div> <!-- end #main -->
 
 	<script type="text/javascript">
