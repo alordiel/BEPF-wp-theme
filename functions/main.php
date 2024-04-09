@@ -5,16 +5,14 @@
 
 add_filter('the_password_form', 'custom_password_form');
 
-function custom_password_form()
+function custom_password_form(): string
 {
 	global $post;
-	$label = 'pwbox-' . (empty($post->ID) ? rand() : $post->ID);
-	$o = '<div class="clearfix"><form class="protected-post-form" action="' . get_option('siteurl') . '/wp-login.php?action=postpass" method="post">
+	$label = 'pwbox-' . (empty($post->ID) ? mt_rand() : $post->ID);
+	return '<div class="clearfix"><form class="protected-post-form" action="' . get_option('siteurl') . '/wp-login.php?action=postpass" method="post">
 		' . '<p>' . __("This post is password protected. To view it please enter your password below:", 'wpbootstrap') . '</p>' . '
 		<label for="' . $label . '">' . __("Password:", 'wpbootstrap') . ' </label><div class="input-append"><input name="post_password" id="' . $label . '" type="password" size="20" /><input type="submit" name="Submit" class="btn btn-primary" value="' . esc_attr__("Submit", 'wpbootstrap') . '" /></div>
-		</form></div>
-		';
-	return $o;
+		</form></div>';
 }
 
 /*********** update standard wp tag cloud widget so it looks better ************/
@@ -31,26 +29,25 @@ function my_widget_tag_cloud_args($args)
 }
 
 // filter tag cloud output so that it can be styled by CSS
-function add_tag_class($taglinks)
+function add_tag_class($tag_links): string
 {
-	$tags = explode('</a>', $taglinks);
+	$tags = explode('</a>', $tag_links);
 	$regex = "#(.*tag-link[-])(.*)(' title.*)#";
-	$tagn = [];
+	$tag_names = [];
 	foreach ($tags as $tag) {
-		$tagn[] = preg_replace($regex, "('$1$2 label tag-'.get_tag($2)->slug.'$3')", $tag);
+		$tag_names[] = preg_replace($regex, "('$1$2 label tag-'.get_tag($2)->slug.'$3')", $tag);
 	}
 
-	return implode('</a>', $tagn);
+	return implode('</a>', $tag_names);
 }
-
 add_action('wp_tag_cloud', 'add_tag_class');
 
-add_filter('wp_tag_cloud', 'wp_tag_cloud_filter', 10, 2);
 
-function wp_tag_cloud_filter($return, $args)
+function wp_tag_cloud_filter($return, $args): string
 {
 	return '<div id="tag-cloud">' . $return . '</div>';
 }
+add_filter('wp_tag_cloud', 'wp_tag_cloud_filter', 10, 2);
 
 // Enable shortcodes in widgets
 add_filter('widget_text', 'do_shortcode');
@@ -59,10 +56,11 @@ add_filter('widget_text', 'do_shortcode');
 function remove_more_jump_link($link)
 {
 	$offset = strpos($link, '#more-');
+	$end = null;
 	if ($offset) {
 		$end = strpos($link, '"', $offset);
 	}
-	if ($end) {
+	if ($end !== null) {
 		$link = substr_replace($link, '', $offset, $end - $offset);
 	}
 	return $link;
@@ -76,16 +74,9 @@ add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10);
 
 function remove_thumbnail_dimensions($html)
 {
-	$html = preg_replace('/(width|height)=\"\d*\"\s/', "", $html);
-	return $html;
+	return preg_replace('/(width|height)=\"\d*\"\s/', "", $html);
 }
 
-/*
-function neuro_register_custom_widgets() {
-	register_widget( 'neuro_Widget_Recent_Posts' );
-}
-add_action( 'widgets_init', 'neuro_register_custom_widgets' );
-*/
 
 // Add the Meta Box to the homepage template
 function add_homepage_meta_box()
@@ -97,7 +88,7 @@ function add_homepage_meta_box()
 	$post_id = $post->ID;
 	$template_file = get_post_meta($post_id, '_wp_page_template', TRUE);
 
-	if ($template_file == 'page-homepage.php') {
+	if ($template_file === 'page-homepage.php') {
 		add_meta_box(
 			'homepage_meta_box', // $id
 			'Optional Homepage Tagline', // $title
@@ -185,14 +176,15 @@ function save_homepage_meta($post_id)
 	// loop through fields and save the data
 	foreach ($custom_meta_fields as $field) {
 		$old = get_post_meta($post_id, $field['id'], true);
-		$new = $_POST[$field['id']];
+		$new = $_POST[$field['id']] ?? '';
 
-		if ($new && $new != $old) {
+		if ($new && $new !== $old) {
 			update_post_meta($post_id, $field['id'], $new);
-		} elseif ('' == $new && $old) {
+		} elseif ('' === $new && $old) {
 			delete_post_meta($post_id, $field['id'], $old);
 		}
 	} // end foreach
+	return $post_id;
 }
 
 add_action('save_post', 'save_homepage_meta');
@@ -200,9 +192,7 @@ add_action('save_post', 'save_homepage_meta');
 // Add thumbnail class to thumbnail links
 function add_class_attachment_link($html)
 {
-	$postid = get_the_ID();
-	$html = str_replace('<a', '<a class="thumbnail"', $html);
-	return $html;
+	return str_replace('<a', '<a class="thumbnail"', $html);
 }
 
 add_filter('wp_get_attachment_link', 'add_class_attachment_link', 10, 1);
@@ -211,19 +201,12 @@ add_filter('nav_menu_css_class', 'add_active_class', 10, 2);
 
 function add_active_class($classes, $item)
 {
-	if ($item->menu_item_parent == 0 && in_array('current-menu-item', $classes)) {
+	if ($item->menu_item_parent === 0 && in_array('current-menu-item', $classes, true)) {
 		$classes[] = "active";
 	}
 
 	return $classes;
 }
-
-
-function dbga($something)
-{
-	error_log(print_r($something, true));
-}
-
 
 function is_resources_page($page_template): bool
 {
