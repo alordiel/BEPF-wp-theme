@@ -22,6 +22,7 @@ require_once('functions/sidebar.php');
 require_once('functions/header.php');
 require_once('functions/resources.php');
 require_once('functions/feed.php');
+require_once('functions/redirects.php');
 
 require_once('custom-post-types/consultations.php');
 require_once('custom-post-types/resources.php');
