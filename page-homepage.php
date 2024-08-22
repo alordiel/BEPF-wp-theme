@@ -9,6 +9,7 @@ Template Name: Homepage
     $posts = get_posts([
         'post_type' => 'post',
         'posts_per_page' => 5,
+        'suppress_filters' => false,
     ]);
 ?>
 <div id="content" class="row">
