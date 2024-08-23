@@ -16,7 +16,7 @@ Template Name: Homepage
 	<div id="main" class="col-md-9 clearfix" role="main">
         <?php if(!empty($posts)): ?>
         <?php $first_post = $posts[0]; ?>
-
+            <?php the_content(); ?>
 
 			<div id="post-<?php echo $first_post->ID; ?>" <?php post_class('clearfix'); ?> >
 				<section class="post_content">
@@ -27,24 +27,24 @@ Template Name: Homepage
                         $hero_background = wp_get_attachment_image_src(get_post_thumbnail_id($first_post->ID), 'full');
                         ?>
 
-							<div class="col-xs-12">
-								<div class="hero hero-primary" style="background-image: url('<?php echo $hero_background['0']; ?>')">
-									<span class="label label-success pub-date pub-date-fp"
-										  itemprop="datePublished"><?php echo get_the_date('d F Y', $first_post->ID); ?></span>
-									<div class="front-page-excerpt">
-										<article role="article">
-											<h2 itemprop="headline">
-											    <a href="<?php echo get_permalink($first_post->ID); ?>">
-													<?php echo $first_post->post_title; ?>
-												</a>
-											</h2>
-											<section class="" itemprop="articleBody">
-												<?php echo get_the_excerpt($first_post->ID) ?>
-											</section>
-										</article>
-									</div>
-								</div>
-							</div>
+                        <div class="col-xs-12">
+                            <div class="hero hero-primary" style="background-image: url('<?php echo $hero_background['0']; ?>')">
+                                <span class="label label-success pub-date pub-date-fp"
+                                      itemprop="datePublished"><?php echo get_the_date('d F Y', $first_post->ID); ?></span>
+                                <div class="front-page-excerpt">
+                                    <article role="article">
+                                        <h2 itemprop="headline">
+                                            <a href="<?php echo get_permalink($first_post->ID); ?>">
+                                                <?php echo $first_post->post_title; ?>
+                                            </a>
+                                        </h2>
+                                        <section class="" itemprop="articleBody">
+                                            <?php echo get_the_excerpt($first_post->ID) ?>
+                                        </section>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
 					</div>
 					<!-- Main Hero Ends -->
                     <?php if (count($posts) > 1 ) :?>
