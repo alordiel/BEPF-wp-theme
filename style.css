@@ -46,3 +46,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/lice
     height: calc(100% - 30px);
   margin-bottom: 15px;
 }
+/*Some posts have the paragraph wrapped in <div> instead of <p>*/
+section.post_content > div {
+  margin-bottom: 16px;
+  font-size: 1.7rem;
+  line-height: 2.9rem;
+}
