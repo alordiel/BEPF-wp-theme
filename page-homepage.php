@@ -2,15 +2,32 @@
 /*
 Template Name: Homepage
 */
+global $wpdb;
 ?>
 
 <?php get_header(); ?>
 <?php
-    $posts = get_posts([
+
+$posts = [];
+$sticky_posts = get_posts([
+    'post_type' => 'post',
+    'posts_per_page' => 5,
+    'suppress_filters' => false,
+    'post__in'  => get_option( 'sticky_posts' ),
+    'ignore_sticky_posts' => 1
+]);
+$count_of_sticky = count($sticky_posts);
+$count_of_normal = 5 - $count_of_sticky;
+if ( $count_of_normal >= 1) {
+    $normal_posts = get_posts([
         'post_type' => 'post',
-        'posts_per_page' => 5,
+        'posts_per_page' => $count_of_normal,
         'suppress_filters' => false,
     ]);
+    $posts = array_merge($sticky_posts, $normal_posts);
+} else {
+    $posts = $sticky_posts;
+}
 ?>
 <div id="content" class="row">
 	<div id="main" class="col-md-9 clearfix" role="main">
