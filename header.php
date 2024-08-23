@@ -47,7 +47,11 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="<?php echo site_url()?>"></a>
+                <?php
+                $current_lang =  apply_filters( 'wpml_current_language', null );
+                $lang = $current_lang === 'en' ? 'en' : '';
+                ?>
+				<a class="navbar-brand" href="<?php echo site_url($lang)?>"></a>
 			</div>
 
 			<div class="collapse navbar-collapse navbar-responsive-collapse navbar-right">
