@@ -77,3 +77,24 @@ section.post_content > div {
 .front-page-excerpt section {
   line-height: 1.9rem;
 }
+
+
+#sidebar-right .row.clearfix {
+  flex-wrap: wrap;
+}
+
+#sidebar-right {
+  min-width: 280px;
+}
+@media (max-width: 1170px) {
+   .col-md-9 {
+    max-width: 740px;
+  }
+}
+
+
+@media (max-width: 765px) {
+  .row{
+    flex-wrap: wrap;
+  }
+}

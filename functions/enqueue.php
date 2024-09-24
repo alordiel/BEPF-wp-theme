@@ -7,7 +7,13 @@ function bepf_theme_styles_and_scripts()
 	if (!is_resources_page(get_page_template_slug())) {
 		// This is the compiled css file from LESS - this means you compile the LESS file locally and put it in the appropriate directory if you want to make any changes to the master bootstrap.css.
 		wp_enqueue_style('webfonts', 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,700,800&subset=cyrillic', array(), '1.0');
-		wp_enqueue_style('bootstrap', BEPF_REL_PATH . '/lib/css/ecs.min.css', array(), '1.0' );
+		wp_enqueue_style(
+			'bootstrap',
+			BEPF_REL_PATH . '/lib/css/ecs.min.css',
+			'[]',
+			filemtime(BEPF_ABS_PATH . '/lib/css/ecs.min.css')
+		);
+
 		wp_enqueue_style(
 			'wpbs-style',
 			BEPF_REL_PATH . '/style.css',
@@ -27,7 +33,7 @@ function bepf_theme_styles_and_scripts()
 			'1.2'
 		);
 
-		wp_enqueue_script('matchheight',
+		wp_enqueue_script('match_height',
 			BEPF_REL_PATH . '/lib/js/jquery.matchHeight-min.js',
 			['jquery'],
 			'1.2'
@@ -39,7 +45,7 @@ function bepf_theme_styles_and_scripts()
 			'bootstrap',
 			BEPF_REL_PATH . '/assets/css/bootstrap.min.css',
 			[],
-			'1.0'
+			'4.0'
 		);
 		wp_enqueue_style(
 			'resources-styles',
