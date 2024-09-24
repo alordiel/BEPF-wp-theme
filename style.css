@@ -1,6 +1,6 @@
 /*
 Theme Name: Ecosociety
-Theme URI: 
+Theme URI:
 Description: A simple responsive theme based on the Bootstrap framework. Includes multiple page templates, two different sidebars and a theme options panel.
 Version: 100.0
 Author: Anton Slavinsky
@@ -22,7 +22,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/lice
   font-weight: 400;
   line-height: 27px;
   padding: 5px;
-  background-color: rgba(0,110,81,0.85);
+  background-color: rgba(0, 110, 81, 0.85);
   display: block;
   max-width: 160px;
   margin-bottom: 0;
@@ -30,25 +30,46 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/lice
 }
 
 .row.container-hero.secondary {
-    align-items: stretch;
+  align-items: stretch;
 }
+
 .hero.hero-secondary {
-    height: 100%;
-    background-position: 50% 50%;
+  padding-top: 30%;
+}
+
+.hero.hero-secondary {
+  height: 100%;
+  background-position: 50% 50%;
   background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.hero.hero-secondary h2.h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  padding-top: 5px;
 }
 
 .row.container-hero.secondary .col-md-6 {
-    margin-bottom: 15px;
-}
-
-.row.container-hero.secondary  .front-page-excerpt {
-    height: calc(100% - 30px);
   margin-bottom: 15px;
 }
+
+.row.container-hero.secondary .front-page-excerpt {
+  height: calc(100% - 30px);
+  padding-bottom: 0;
+  padding-top: 0;
+
+}
+
 /*Some posts have the paragraph wrapped in <div> instead of <p>*/
 section.post_content > div {
   margin-bottom: 16px;
   font-size: 1.7rem;
   line-height: 2.9rem;
+}
+
+.front-page-excerpt section {
+  line-height: 1.9rem;
 }
