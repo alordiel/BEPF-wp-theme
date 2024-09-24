@@ -29,6 +29,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/lice
   border-radius: 0;
 }
 
+.hero.hero-primary {
+  padding-top: 30%;
+}
+
 .row.container-hero.secondary {
   align-items: stretch;
 }
